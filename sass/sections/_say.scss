@@ -1,0 +1,54 @@
+#say
+{
+	margin-top: $rowGap;
+	background-image: url('../images/medical-parallax-3.jpg');
+	width: $fullWidth;
+	height: 641px;
+	background-size: cover;
+	.container-fluid
+	{
+		width: 100%;
+		height: 100%;
+		background: rgba($mainColor2, 0.5);
+		.container
+		{
+			.row
+			{
+				h1
+				{
+					padding-top: $rowGap*10;
+					@extend .section-head;
+					@include h1($mainFontSize*1.8, $mainFontWeight*1.5, $mainColor3, $lineHeight*1.4);
+				}
+				.images
+				{
+					margin: $rowGap*5 0px;
+					@extend .text-center;
+					margin: auto;
+					width: 100px;
+					height: 100px;
+					img
+					{
+						margin: $rowGap*5 0px;
+						border-radius: 100%;
+					}
+				}
+				
+				p
+				{
+					margin: $rowGap*7 0px 0px 0px;
+					@extend .text-center;
+					@include p($mainFontSize*1.2, $mainColor3, $lineHeight*1.2);
+				}
+				h2
+				{
+					margin: $rowGap*2 0px;
+					@extend .text-center;
+					@include h2($mainFontSize*1.4, $mainFontWeight*1.5, $mainColor3, none);
+				}
+			}
+		}
+	}
+	
+	
+}

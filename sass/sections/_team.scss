@@ -1,0 +1,74 @@
+#team
+{
+	.container
+	{
+		.row
+		{
+			h1
+			{
+				margin:$rowGap*8;
+				@extend .section-head;
+				@include h1($mainFontSize*1.8, $mainFontWeight*1.5, none, $lineHeight*1.4);
+			}
+		}
+		.team
+		{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+			grid-column-gap: $rowGap*3;
+			
+		}
+		.icon
+		{
+			opacity: 0;
+			width: 263px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			a
+			{
+				padding: 11px;
+				@include a($mainFontSize*1.5, $mainColor2, $mainColor2);
+			}
+			i
+			{	
+				transform: rotateY(225deg);
+				@include i($mainFontSize*1.5, none, $mainColor, $mainColor2, none);
+			}
+		}
+		.single-team
+		{
+			position: relative;
+			&:hover
+			{
+				img
+				{
+					transition: .3s;
+					opacity: 0.1;
+				}
+				.icon
+				{
+					opacity: 1;
+					transition: .7s;
+				}
+				i
+				{	
+					transition: .7s;
+					transform: rotateY(360deg);
+				}
+			}
+		}
+		
+		a
+		{
+			@extend .text-center;
+			@include a($mainFontSize*1.8, $mainColor2, $mainColor);
+		}
+		p
+		{	@extend .text-center;
+			@include p($mainFontSize*1.2, $mainColor2, $lineHeight);
+			font-style: italic;
+		}
+	}
+}

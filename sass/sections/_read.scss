@@ -1,0 +1,32 @@
+#read
+{
+	.container-fluid
+	{
+		background: lighten($mainColor2, 1%);
+		.container
+		{
+			.row
+			{
+				display: grid;
+				grid-template-columns: 7fr 1fr;
+				h1
+				{
+					@extend .text-left;
+					margin-top: $rowGap*5;
+					@include h1($mainFontSize*2.5, none, $mainColor3, $lineHeight*1.7);
+				}
+				p
+				{
+					@extend .text-left;
+					color: $mainColor3;
+				}
+				button
+					{
+						margin: $rowGap*6 0px;
+					
+						@include button($mainColor2, $mainColor3, $mainColor3, $mainColor4, $mainColor2, $mainColor2);
+					}
+			}
+		}
+	}
+}

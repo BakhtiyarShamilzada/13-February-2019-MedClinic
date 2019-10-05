@@ -1,0 +1,79 @@
+#about
+{
+	.container-fluid
+	{
+		background: darken($mainColor3, 5%);
+		.container
+		{
+			.row
+			{
+				margin-bottom: 0px;
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				grid-column-gap: $rowGap*4;
+				p
+				{
+
+					@include p($mainFontSize, $mainColor2, $lineHeight);
+				}
+				div:nth-child(2)
+				{
+					background: $mainColor3;
+					h1
+					{
+						&:hover
+						{
+							cursor: pointer;
+							@include h1(none, none, $mainColor, none);
+						}
+					}
+				}
+				div:nth-child(3)
+				{
+					background: $mainColor3;
+					h1
+					{
+						&:hover
+						{
+							cursor: pointer;
+							@include h1(none, none, $mainColor, none);
+						}
+					}
+				}
+				div
+				{
+					@extend .text-center;
+					margin: $rowGap*8 0px;
+					img
+					{
+						width: 100%;
+					}
+					h1
+					{
+						@include h1($mainFontSize*1.5, $mainFontWeight*1.5, none, $lineHeight);
+						margin: $rowGap*2;
+					}
+					
+					button
+					{
+						margin-top: $rowGap*2;
+						@include button($mainColor3, $mainColor, $mainColor, $mainColor3, $mainColor4, $mainColor4);
+					}
+
+					&:first-child
+					{
+						h1
+						{
+							@include h1($mainFontSize*2, $mainFontWeight*1.5, none, $lineHeight*1.4);
+						}
+						p
+						{
+							margin-top: $rowGap;
+						}
+						
+					}
+				}
+			}
+		}
+	}
+}

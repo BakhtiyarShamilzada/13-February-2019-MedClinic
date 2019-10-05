@@ -1,0 +1,93 @@
+#header
+{
+	.container-fluid
+	{
+		.container
+		{
+			display: grid;
+			margin-top: $rowGap;
+			grid-row-gap: $rowGap*2;
+			.header-top
+			{
+				padding-bottom: $rowGap;
+				border-bottom: 1px solid lightgray;
+				@extend p;
+				display: grid;
+				grid-template-columns: 5.5fr 1.5fr 1.5fr;
+				
+				p
+				{
+					margin-top: 7px;
+				}
+				a
+				{
+					@include a($mainFontSize, $mainColor, $mainColor2);
+				}
+				.icon-border
+				{
+					border-left: 1px solid lightgray;
+				}
+			}
+			.header-middle
+			{
+
+				display: grid;
+				grid-template-columns: 5fr 0.5fr 4fr 0.5fr 3fr 0.5fr 2fr;
+
+				.fab
+				{
+					@include i($mainFontSize*2.1, none, $mainColor, none, none);
+				}
+				.icon-big
+				{
+					@include i($mainFontSize*2.1, none, $mainColor, none, none);
+				}
+				img
+				{
+					width: 150px;
+				}
+
+				a
+				{
+
+					@include a($mainFontSize, $mainColor2, $mainColor);
+				}
+				.a-hover
+				{
+					padding: 0px;
+				}
+			}
+			.header-bottom
+			{
+				margin-bottom: $rowGap;
+				border-top: 1px solid lightgray;
+				nav
+				{
+
+					ul
+					{
+						padding-top: $rowGap;
+						li
+						{
+							@extend .float-left;
+							&:first-child
+							{
+								a
+								{
+									padding-left:0px;
+								}
+							}
+							
+							a
+							{
+								@extend .uppercase;
+								padding: 0px $columnGap*2;
+								@include a($mainFontSize, $mainColor2, $mainColor);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

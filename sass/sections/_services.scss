@@ -1,0 +1,87 @@
+#services
+{
+	.container-fluid
+	{
+		background: darken($mainColor3, 5%);
+		.container
+		{
+			h1
+			{
+				margin: $rowGap*2;
+				@extend .text-center;
+			}
+			p
+			{
+				@extend .text-center;
+				@include p($mainFontSize, $mainColor2, $lineHeight);
+			}
+			.row
+			{
+				h1
+				{
+					@extend .section-head;
+					@include h1($mainFontSize*1.8, $mainFontWeight*1.5, none, $lineHeight*1.4);
+				}
+			}
+			.row1
+			{
+				.icon
+				{
+					overflow: hidden;
+					@extend .text-center;
+					border-radius: 100%;
+					margin: auto;
+					position: relative;
+					width: 90px;
+					height: 90px;
+					background: $mainColor;
+
+				}
+				.overlay
+				{
+					transition: .3s;
+					opacity: 1;
+					left: -90px;
+					position: absolute;
+					border-radius: 100%;
+					width: 90px;
+					height: 90px;
+					background: $mainColor4;
+				}
+				.services-single
+				{
+					&:hover
+					{
+						.overlay
+						{
+							z-index: 2;
+							opacity: 1;
+							left: 0px;
+						}
+						i
+						{
+							z-index: 3;
+						}
+					}
+				}
+				i
+				{ 
+					position: absolute;
+					transform: translate(-50%, 50%);
+					@include i($mainFontSize*3, none, $mainColor3, none, $lineHeight*1.5);
+				}
+				padding: $rowGap*5;
+				h1
+				{
+
+					@include h1($mainFontSize*1.5, $mainFontWeight*1.5, none, $lineHeight);
+
+						//margin: $rowGap*2;
+					}
+					display: grid;
+					grid-template-columns: 1fr 1fr 1fr;
+					grid-gap: $rowGap*3;
+				}
+			}
+		}
+	}

@@ -1,0 +1,71 @@
+body
+{
+	font-family: $mainFont;
+	font-size: $mainFontSize;
+}
+
+//Text Classes
+
+.text-left
+{
+	text-align: left;
+}
+.text-right
+{
+	text-align: right;
+}
+.text-center
+{
+	text-align: center;
+}
+.text-justify
+{
+	text-align: justify;
+}
+
+//Floating elements
+
+.float-left
+{
+	float: left;
+}
+.float-right
+{
+	float: right;
+}
+.clear
+{
+	clear: both;
+}
+a
+{	
+	text-decoration: none;
+	padding: $rowGap;
+}
+.box-sizing
+{
+	box-sizing: border-box;
+}
+.uppercase
+{
+	text-transform: uppercase;
+}
+
+.section-head
+{
+	@extend .text-center;
+	position: relative;
+	letter-spacing: .5px;
+	&::after
+	{
+		content: "";
+		width: 50px;
+		height: 1px;
+		bottom: -10px;
+		background: $mainColor;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+	}
+}

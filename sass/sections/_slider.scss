@@ -1,0 +1,113 @@
+#slider
+{
+	.container-fluid
+	{
+		background-image: url('../images/medical-slide-2.jpg');
+		width: $fullWidth;
+		height: 650px;
+		background-size: cover;
+		.container-fluid-color
+		{
+			width: 100%;
+			height: 100%;
+			background: rgba($mainColor2, 0.5);
+			.container
+			{
+				.row
+				{
+					display: grid;
+					grid-template-columns: 3.1fr 2fr;
+					div
+					{
+						margin-top: $rowGap*4;
+						h1
+						{
+							@include h1(none, $mainFontWeight*1.5, $mainColor3,none);
+						}
+						button
+						{
+							margin: $rowGap*2.5 0px;
+						}
+						&:first-child
+						{
+							h1
+							{
+								@include h1($mainFontSize*5, none, none, $lineHeight*2.7);
+								margin: $rowGap*21 0px 0px $columnGap*4.5;
+							}
+							button
+							{
+								margin-left: $rowGap*5;
+								@include button($mainColor3, $mainColor, $mainColor, $mainColor3, $mainColor4, $mainColor4);
+							}
+						}
+						&:last-child
+						{
+							padding: 0px 0px 0px $rowGap*4;
+							
+							h1
+							{
+								margin-top: $rowGap*2;
+								@extend .text-left;
+								
+								@include h1($mainFontSize*1.8, $mainFontWeight*1.5, none, $lineHeight*2.7);
+								
+							}
+							background: rgba($mainColor, 0.5);
+							width: 461.66px;
+							
+							form
+							{
+								label
+								{
+									position: relative;
+								}
+
+								input
+								{
+									
+									font-size: $mainFontSize*1.1;
+									width: 343px;
+									color: #777777;
+									padding: 0px $rowGap*1.5 0px $rowGap*6 ;
+									height: 40px;
+									margin-bottom: $rowGap*2.5;
+								}
+								.fa-feather
+								{
+									margin-top: 20px;
+								}
+								textarea
+								{
+									
+									padding: $rowGap*2 $rowGap*1.5 0px $rowGap*6 ;
+									font-size: $mainFontSize*1.1;
+									width: 345px!important;
+									color: #777777;
+									height: 90px;
+								}
+								i
+								{
+									color: lightgray;
+									top: -1px;
+									left: 25px;
+									position: absolute;
+									@include i($mainFontSize*1.5, none, none, none, none);
+								}
+								.fa-feather
+								{
+									top: -100px;
+								}
+								button
+								{
+									margin-top: $rowGap*2.5;
+									@include button($mainColor3, $mainColor4, $mainColor4,$mainColor3, $mainColor,$mainColor);
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

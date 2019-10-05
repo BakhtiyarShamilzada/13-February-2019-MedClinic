@@ -1,0 +1,131 @@
+#footer
+{
+	.container-fluid-top
+	{
+		background: lighten($mainColor2, 1%);
+		.container
+		{
+			.row-top
+			{
+				display: grid;
+				grid-template-columns: 1fr 0.9fr 0.8fr 1fr;
+				grid-column-gap: $columnGap*3;
+				div
+				{
+					margin: $rowGap*7 0px;
+					h1
+					{
+						margin:$rowGap 0px;
+
+						@include h1($mainFontSize*1.4, $mainFontWeight*1.5, $mainColor3, $lineHeight);
+					}
+					p
+					{	margin-top: $rowGap*2;
+						@include p($mainFontSize*1.1, $mainColor3, $lineHeight*0.9);
+
+					}
+					a
+					{
+						padding: 0px;
+						@include a($mainFontSize*1.2, $mainColor3, $mainColor);
+					}
+					.italic
+					{	
+
+						@include p($mainFontSize*1.1, $mainColor3, $lineHeight*0.9);
+						font-style: italic;
+						color: #777777;
+					}
+					.p-contact
+					{	margin-top: $rowGap*2;
+						@include p($mainFontSize*1.1, $mainColor3, $lineHeight*0.9);
+						color: #777777;
+					}
+					.contact
+					{
+						padding: 0px;
+						@include a($mainFontSize*1.1, $mainColor3, $mainColor);
+						color: #777777;
+					}
+					label
+					{
+						position: relative;
+					}
+					
+					input
+					{
+						padding: 0px $rowGap*1.5 0px $rowGap*6 ;
+						font-size: $mainFontSize*1.1;
+						color: #777777;
+						width: 169px!important;
+						height: 40px;
+						margin: 5px 0px;
+						background: lighten($mainColor4, 5%);
+						border-color: lighten($mainColor2, 1%);
+					}
+					.fa-feather
+					{
+						margin-top: -30px;
+					}
+					textarea
+					{
+						@extend .box-sizing;
+						padding: $rowGap*2 $rowGap*1.5 0px $rowGap*6 ;
+						font-size: $mainFontSize*1.1;
+						color: #777777;
+						width: 247px!important;
+						background: lighten($mainColor4, 5%);
+						border-color: lighten($mainColor2, 1%);
+						margin: 5px 0px;
+					}
+					i
+					{
+						color: #777777;
+						top: -1px;
+						left: 25px;
+						position: absolute;
+						@include i($mainFontSize*1.5, none, none, none, none);
+					}
+					.fa-feather
+					{
+						top: -100px;
+					}
+					button
+					{
+						margin: $rowGap*2 auto;
+						@extend .text-center;
+						@include button($mainColor3, $mainColor, $mainColor, $mainColor3, $mainColor4, $mainColor4);
+					}
+				}
+			}
+		}
+	}
+	.container-fluid-bottom
+	{
+		background: lighten($mainColor4, 5%);
+		.container
+		{
+			.row-bottom
+			{
+				display: grid;
+				grid-template-columns: 4.5fr 1fr;
+				grid-column-gap: $columnGap*2;
+				p
+				{	
+					margin: $rowGap*2 0px;
+					@include p($mainFontSize*1.1, $mainColor3, $lineHeight*0.9);
+					color: #777777;
+				}
+				.icon
+				{
+					margin: $rowGap*2 0px;
+					a
+					{
+						
+						@include a($mainFontSize, $mainColor3, $mainColor);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,38 @@
+#blog
+{
+	.container
+	{
+		.row
+		{
+			display: grid;
+			grid-template-columns: 3fr 3fr;
+			grid-column-gap: $columnGap*10;
+			div
+			{
+				margin:$rowGap*5 0px;
+				h1
+				{
+					cursor: pointer;
+				//margin:$rowGap*5;
+				
+				@include h1($mainFontSize*1.5, $mainFontWeight*1.5, none, $lineHeight*1.2);
+				}
+				p
+				{	margin: $rowGap*4 0px $rowGap*8 0px;
+					@include p($mainFontSize, $mainColor2, $lineHeight);
+
+				}
+				hr
+				{
+					margin: $rowGap*5 0px $rowGap 0px;
+				}
+				img
+				{
+					margin:$rowGap*8 0px;
+					width: 462px;
+					height: 416px;
+				}
+			}
+		}
+	}
+}

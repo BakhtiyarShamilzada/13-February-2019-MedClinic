@@ -1,0 +1,24 @@
+// import common scss files
+
+@import 'lib/reset';
+@import 'lib/variables';
+@import 'lib/grid';
+@import 'lib/common';
+@import 'lib/mixins';
+
+// import sections
+
+@import 'sections/header';
+@import 'sections/slider';
+@import 'sections/about';
+@import 'sections/read';
+@import 'sections/services';
+@import 'sections/gallery';
+@import 'sections/statistic';
+@import 'sections/pricing';
+@import 'sections/team';
+@import 'sections/say';
+@import 'sections/news';
+@import 'sections/blog';
+@import 'sections/map';
+@import 'sections/footer';
